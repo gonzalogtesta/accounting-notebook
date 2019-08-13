@@ -50,7 +50,7 @@ class AccordionItems extends React.Component {
                         <div class="row">
                             <div class="col-sm">Date</div>
                             <div class="col-sm">Description</div>
-                            <div class="col-sm">Ammount</div>
+                            <div class="col-sm">Amount</div>
                         </div>
                     </div>
                     {items.map((item, key) =>

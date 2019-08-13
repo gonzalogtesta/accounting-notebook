@@ -32,7 +32,7 @@ class Item extends React.Component {
                             <Badge variant={isCredit(this.item) ? 'success' : 'danger'}>{ this.item.type }</Badge>
                             <div class="col-sm">{ date }</div>
                             <div class="col-sm">{ this.item.description }</div>
-                            <div className={isCredit(this.item) ? 'col-sm ammount positive' : 'col-sm ammount negative'}>{ this.item.ammount }</div>
+                            <div className={isCredit(this.item) ? 'col-sm amount positive' : 'col-sm amount negative'}>{ this.item.amount }</div>
                         </div>
                     </div>
 
@@ -42,7 +42,7 @@ class Item extends React.Component {
                     <Card.Body>
                         <div>Id: { this.item.id }</div>
                         <div>Date: { date }</div>
-                        <div>Ammount: { this.item.ammount }</div>
+                        <div>Amount: { this.item.amount }</div>
                         <div>Type: { this.item.type }</div>
                         <div>Description: { this.item.description }</div>
                     </Card.Body>

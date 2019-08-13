@@ -21,10 +21,10 @@
 .card-header .col-sm {
     color: black;
 }
-.col-sm.ammount.negative {
+.col-sm.amount.negative {
     color: red;
 }
 
-.col-sm.ammount.positive {
+.col-sm.amount.positive {
     color: green;
 }
