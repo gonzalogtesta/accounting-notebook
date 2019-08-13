@@ -23,6 +23,9 @@ Running the API with a loaded virtualenv:
 
     (venv) $ flask run
 
+## Swagger doc
+
+Swagger file: https://github.com/gonzalogtesta/accounting-notebook/blob/master/accounting-notebook-api/doc/swagger.yaml
 
 ## API testing using Insomnia
 
