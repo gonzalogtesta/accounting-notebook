@@ -26,7 +26,7 @@ Running the API with a loaded virtualenv:
 
 ## API testing using Insomnia
 
-An Insomnia workspace is available in folder: `test/insomnia`
+An Insomnia workspace is available in folder: `tests/insomnia`
 
 
 
