@@ -37,6 +37,8 @@ paths:
           description: "successful operation"
           schema:
             $ref: "#/definitions/Transaction"
+        422:
+          description: "unprocessable entity"
 
   /transactions/{transactionId}:
     get:
