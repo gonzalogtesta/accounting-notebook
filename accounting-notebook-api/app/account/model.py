@@ -14,7 +14,7 @@ class Account(object):
 
         self.lock.acquire_write()
         try:
-            self._balance += transaction.ammount
+            self._balance += transaction.amount
             self._transactions.insert(0, transaction)
 
         finally:
@@ -24,9 +24,9 @@ class Account(object):
 
         self.lock.acquire_write()
         try:
-            if self._balance < transaction.ammount:
+            if self._balance < transaction.amount:
                 raise NoAvailableFounds()
-            self._balance -= transaction.ammount
+            self._balance -= transaction.amount
             self._transactions.insert(0, transaction)
         finally:
             self.lock.release_write()

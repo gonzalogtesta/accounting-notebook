@@ -15,16 +15,16 @@ def test_add_credit_to_account():
     account = Account()
     transaction = Transaction()
     transaction.type = Operations.CREDIT
-    transaction.ammount = 50
+    transaction.amount = 50
     account.process(transaction)
     assert account.balance == 50, "Should be 50"
     assert len(account.transactions) == 1, "Should not be empty"
 
 def test_add_debit_to_account():
-    account = _account_with_ammount(100)
+    account = _account_with_amount(100)
     transaction = Transaction()
     transaction.type = Operations.DEBIT
-    transaction.ammount = 50
+    transaction.amount = 50
     account.process(transaction)
     assert account.balance == 50, "Should be 50"
     assert len(account.transactions) == 2, "Should be 2"
@@ -33,16 +33,16 @@ def test_debit_without_balance():
     account = Account()
     transaction = Transaction()
     transaction.type = Operations.DEBIT
-    transaction.ammount = 50
+    transaction.amount = 50
     with pytest.raises(NoAvailableFounds):
         account.process(transaction)
     assert account.balance == 0, "Should be 0"
 
-def _account_with_ammount(ammount):
+def _account_with_amount(amount):
     account = Account()
     transaction = Transaction()
     transaction.type = Operations.CREDIT
-    transaction.ammount = ammount
+    transaction.amount = amount
     account.process(transaction)
 
     return account

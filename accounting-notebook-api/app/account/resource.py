@@ -9,4 +9,3 @@ def register(app):
         result = account_schema.dump(app.account)
         return jsonify(result.data)
 
-

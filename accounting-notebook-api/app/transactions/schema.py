@@ -7,7 +7,7 @@ from .model import Transaction
 class TransactionSchema(Schema):
     id = fields.Str(dump_only=True)
     type = EnumField(Operations)
-    ammount = fields.Float()
+    amount = fields.Float()
     description = fields.Str()
     effectiveDate = fields.DateTime(dump_only=True, attribute='effective_date')
 
