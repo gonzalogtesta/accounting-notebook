@@ -7,8 +7,6 @@ def register(app):
     @app.route('/transactions/<string:id>', methods=['GET'])
     def get_transactions_by_id(id):
         transaction = next((transaction for transaction in app.account.transactions() if str(transaction.id) == id), None)
-        print(transaction)
-        print(app.account.transactions)
         if transaction is None:
             abort(404)
 
