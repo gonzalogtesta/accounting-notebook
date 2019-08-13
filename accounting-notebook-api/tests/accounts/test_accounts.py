@@ -2,7 +2,7 @@ import pytest
 from app.account.model import Account
 from app.transactions.model import Transaction
 from app.operations.model import Operations
-from app.account.exceptions import NoAvailableFounds, OperationNotImplemented
+from app.account.exceptions import NoAvailableFounds, OperationNotImplemented, InvalidTransaction
 
 def test_account_without_operations():
     account = Account()
@@ -55,6 +55,13 @@ def test_account_with_none_transaction_type():
     transaction.amount = 50
     with pytest.raises(OperationNotImplemented):
         account.process(transaction)
+
+    assert account.balance() == 0, "Should be 0"
+
+def test_account_with_invalid_transaction():
+    account = Account()
+    with pytest.raises(InvalidTransaction):
+        account.process(None)
 
     assert account.balance() == 0, "Should be 0"
 

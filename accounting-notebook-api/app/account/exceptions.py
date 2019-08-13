@@ -4,3 +4,6 @@ class NoAvailableFounds(Exception):
 
 class OperationNotImplemented(Exception):
     pass
+
+class InvalidTransaction(Exception):
+    pass

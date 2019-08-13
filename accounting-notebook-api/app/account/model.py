@@ -1,5 +1,5 @@
 import threading
-from .exceptions import NoAvailableFounds, OperationNotImplemented
+from .exceptions import NoAvailableFounds, OperationNotImplemented, InvalidTransaction
 from app.operations.model import Operations
 from app.base.readwritelock import ReadWriteLock
 
@@ -32,6 +32,9 @@ class Account(object):
             self.lock.release_write()
 
     def process(self, transaction):
+
+        if transaction is None:
+            raise InvalidTransaction()
 
         if transaction.type == Operations.DEBIT:
             self._debit(transaction)

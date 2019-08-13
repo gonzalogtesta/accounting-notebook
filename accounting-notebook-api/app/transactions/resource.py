@@ -28,6 +28,10 @@ def register(app):
             data = transaction_schema.load(json_data)
         except ValidationError as err:
             return jsonify(err.messages), 422
+
+        if data.errors:
+            return jsonify(data.errors), 422
+
         transaction = data.data
         app.account.process(transaction)
         result = transaction_schema.dump(data.data)
