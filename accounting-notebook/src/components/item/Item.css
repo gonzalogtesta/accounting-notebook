@@ -1,0 +1,30 @@
+.card-body {
+    color: black;
+}
+
+.card-header {
+    text-decoration: none;
+}
+
+.card-header .badge {
+    float: left;
+    font-size: 11px;
+    height: 50%;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+}
+.btn-link {
+    width: 100%;
+}
+.card-header .col-sm {
+    color: black;
+}
+.col-sm.ammount.negative {
+    color: red;
+}
+
+.col-sm.ammount.positive {
+    color: green;
+}
